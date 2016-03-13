@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.glenn.lathalanavigation.About"
+    tools:showIn="@layout/activity_about"
+    android:background="@color/lathalaColor">
+    <TextView
+        android:id="@+id/tv_About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/Logo"
+        android:layout_alignParentStart="false" />
+
+    =
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LATHALA"
+        android:textColor="#e4eae6"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lathala is a social media platform that aims to help its users to save time and effort when updating their individual social media accounts. This is a project under development through a course requirement in De La Salle University Manila. All names and labels included in this application belongs to their own respective organizations."
+        android:id="@+id/AboutContent"
+        android:layout_below="@+id/tv_About"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developers"
+        android:id="@+id/tv_Developers"
+        android:layout_below="@+id/AboutContent"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paolo de Jesus"
+        android:id="@+id/tv_Paolo"
+        android:layout_below="@+id/tv_Developers"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veronica Mangubat"
+        android:id="@+id/tv_Veronica"
+        android:layout_below="@+id/tv_Paolo"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glenn Matias"
+        android:id="@+id/tv_Glenn"
+        android:layout_below="@+id/tv_Veronica"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:id="@+id/tv_ContactUs"
+        android:layout_below="@+id/tv_Glenn"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="paolo_dejesus@dlsu.edu.ph"
+        android:id="@+id/tv_PaoloEmail"
+        android:layout_below="@+id/tv_ContactUs"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="veronica_mangubat@dlsu.edu.ph"
+        android:id="@+id/tv_VeronicaEmail"
+        android:layout_below="@+id/tv_PaoloEmail"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="glenn_matias@dlsu.edu.ph"
+        android:id="@+id/tv_GlennEmail"
+        android:layout_below="@+id/tv_VeronicaEmail"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Give us 5 stars please"
+        android:id="@+id/btn_Rate"
+        android:layout_below="@+id/tv_GlennEmail"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentStart="true"
+        />
+
+
+</RelativeLayout>

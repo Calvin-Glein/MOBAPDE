@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.glenn.lathalanavigation.CreateAccount"
+    tools:showIn="@layout/activity_create_account"
+    android:background="@color/lathalaColor">
+
+    <TextView
+        android:id="@+id/tv_About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/Logo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et_Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_below="@+id/tv_About"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_Username"
+        android:text="Username"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/et_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_Password"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="#e4eae6"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:id="@+id/bt_CreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:background="#1d9442"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/et_Password"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_RetypePassword"
+        android:background="#ffffff"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I have read and understood the Terms and Agreement"
+        android:id="@+id/checkBox"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:checked="false"
+        android:layout_marginTop="77dp"
+        android:layout_below="@+id/et_RetypePassword"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retype Password"
+        android:id="@+id/textView3"
+        android:layout_marginTop="10dp"
+
+        android:textColor="#ffffff"
+        android:layout_below="@+id/et_RetypePassword"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_marginTop="10dp"
+
+        android:background="#ffffff"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
