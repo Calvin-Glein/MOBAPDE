@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Publish extends AppCompatActivity
@@ -21,6 +22,7 @@ public class Publish extends AppCompatActivity
     final static String KEY_CURRENT_PHOTO = "current_photo";
     final static int REQUEST_PHOTO = 0;
 
+    TextView tvName;
 
     EditText etContent;
     Button btnSelectPhoto;
@@ -30,6 +32,11 @@ public class Publish extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        tvName = (TextView) findViewById(R.id.tvName);
+
+       // tvName.setText(Login.ACCOUNT_NAME);
 
         btnSelectPhoto = (Button) findViewById(R.id.bt_AddPhoto);
         etContent = (EditText) findViewById(R.id.et_Content);
@@ -48,6 +55,8 @@ public class Publish extends AppCompatActivity
                 startActivityForResult(explicit, REQUEST_PHOTO);
             }
         });
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

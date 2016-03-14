@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
+    public static int ACCOUNT_NUMBER;
+    public static String ACCOUNT_NAME = "User's name";
     //Nica eto
     DatabaseOpenHelper db;
     EditText etUsername, etPassword;
@@ -50,6 +52,10 @@ public class Login extends AppCompatActivity {
                 else {
                     String checkPassword = u.getPassword();
                     if (password.equals(checkPassword) == true) {
+                        //added account number para mag sync
+                        ACCOUNT_NUMBER = u.getId();
+                        ACCOUNT_NAME = u.getName();
+
                         Intent explicit = new Intent();
                         homepage.setClass(getBaseContext(), Publish.class);
                         startActivity(homepage);

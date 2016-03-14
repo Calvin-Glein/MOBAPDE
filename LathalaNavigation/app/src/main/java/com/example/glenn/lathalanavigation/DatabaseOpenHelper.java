@@ -28,6 +28,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         String sql = "CREATE TABLE "
                 + User.TABLE_NAME + " ( "
                 + User.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + User.COLUMN_NAME + " TEXT,"
                 + User.COLUMN_USERNAME + " TEXT,"
                 + User.COLUMN_PASSWORD + " TEXT);";
         //+Note.COLUMN_URL+" TEXT);"
@@ -35,7 +36,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
 
 
-        String sql2 = "INSERT INTO " + User.TABLE_NAME + " ( " + User.COLUMN_ID + " , " +User.COLUMN_USERNAME + " , " + User.COLUMN_PASSWORD+ " ) VALUES (1, 'username', 'password');" ;
+        String sql2 = "INSERT INTO " + User.TABLE_NAME + " ( " + User.COLUMN_ID + " , " +User.COLUMN_NAME + " , " +User.COLUMN_USERNAME + " , " + User.COLUMN_PASSWORD+ " ) VALUES (1, 'Teemo', 'username', 'password');" ;
 
         //String sql2 = "INSERT INTO user( _id, username, password) VALUES (1, username, password)" ;
 
