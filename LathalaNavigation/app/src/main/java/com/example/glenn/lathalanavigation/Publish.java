@@ -20,6 +20,7 @@ public class Publish extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     final static String KEY_CURRENT_PHOTO = "current_photo";
+    
     final static int REQUEST_PHOTO = 0;
 
     EditText etContent;
