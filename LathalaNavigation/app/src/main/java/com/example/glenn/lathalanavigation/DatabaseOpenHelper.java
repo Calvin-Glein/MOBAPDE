@@ -24,15 +24,24 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         //create tables here
         // CREATE TABLE note (_id INTEGER PRIMARY KEY AUTOINCREMENT,
         //  title TEXT,
-        //  note TEXT);
-        String sql = "CREATE TABLE " + User.TABLE_NAME + " ( "
+
+        String sql = "CREATE TABLE "
+                + User.TABLE_NAME + " ( "
                 + User.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + User.COLUMN_USERNAME + " TEXT,"
                 + User.COLUMN_PASSWORD + " TEXT);";
         //+Note.COLUMN_URL+" TEXT);"
-        User defaultUser = new User("projectlathala", "mobapde123");
-        addUser(defaultUser);
+
         db.execSQL(sql);
+
+
+        String sql2 = "INSERT INTO " + User.TABLE_NAME + " ( " + User.COLUMN_ID + " , " +User.COLUMN_USERNAME + " , " + User.COLUMN_PASSWORD+ " ) VALUES (1, 'username', 'password');" ;
+
+        //String sql2 = "INSERT INTO user( _id, username, password) VALUES (1, username, password)" ;
+
+        db.execSQL(sql2);
+//        User defaultUser = new User("projectlathala", "mobapde123");
+//        addUser(defaultUser);
     }
 
     //add
