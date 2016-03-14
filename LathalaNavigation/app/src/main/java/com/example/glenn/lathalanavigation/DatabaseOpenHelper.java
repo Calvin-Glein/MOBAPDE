@@ -51,6 +51,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(u.COLUMN_USERNAME, u.getUsername());
         cv.put(u.COLUMN_PASSWORD, u.getPassword());
+        cv.put(u.COLUMN_NAME, u.getName());
         //cv.put(Note.COLUMN_URL, n.getURL());
         long id = db.insert(u.TABLE_NAME, null, cv);
         db.close();

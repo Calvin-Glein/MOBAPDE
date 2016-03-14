@@ -22,8 +22,6 @@ public class Publish extends AppCompatActivity
     final static String KEY_CURRENT_PHOTO = "current_photo";
     final static int REQUEST_PHOTO = 0;
 
-    TextView tvName;
-
     EditText etContent;
     Button btnSelectPhoto;
     @Override
@@ -32,11 +30,6 @@ public class Publish extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        tvName = (TextView) findViewById(R.id.tvName);
-
-       // tvName.setText(Login.ACCOUNT_NAME);
 
         btnSelectPhoto = (Button) findViewById(R.id.bt_AddPhoto);
         etContent = (EditText) findViewById(R.id.et_Content);
@@ -159,6 +152,8 @@ public class Publish extends AppCompatActivity
 //            startActivity(intent);
 
         } else if (id == R.id.nav_Logout) {
+            Login.ACCOUNT_NAME=null;
+            Login.ACCOUNT_NUMBER=-1;
             finish();
         } else if (id == R.id.nav_About) {
             Intent intent = new Intent();
