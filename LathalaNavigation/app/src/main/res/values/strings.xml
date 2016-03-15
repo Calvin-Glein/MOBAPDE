@@ -16,5 +16,6 @@
     <string name="title_activity_facebook_details">FacebookDetails</string>
     <string name="title_activity_twitter_details">TwitterDetails</string>
     <string name="title_activity_instagram_details">InstagramDetails</string>
+    <string name="title_activity_feed">Feed</string>
 
 </resources>

@@ -4,11 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_publish"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_share"
             android:title="Publish" />
         <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Feed" />
+        <item
             android:id="@+id/nav_facebook"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_gallery"
             android:title="Facebook" />
         <item
             android:id="@+id/nav_twitter"
@@ -16,8 +20,10 @@
             android:title="Twitter" />
         <item
             android:id="@+id/nav_instagram"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_gallery"
             android:title="Instagram" />
+
+
 
     </group>
 
@@ -25,7 +31,7 @@
         <menu>
             <item
                 android:id="@+id/nav_Logout"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_menu_send"
                 android:title="Logout" />
             <item
                 android:id="@+id/nav_About"
