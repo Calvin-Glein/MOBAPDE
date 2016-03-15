@@ -29,9 +29,9 @@ public class CreateAccount extends AppCompatActivity {
         setContentView(R.layout.activity_create_account);
 
         db = new DatabaseOpenHelper(getBaseContext());
-        etUsername = (EditText) findViewById(R.id.et_Password);
+        etUsername = (EditText) findViewById(R.id.et_Username);
         etPassword = (EditText) findViewById(R.id.et_Password);
-        etName = (EditText) findViewById(R.id.et_Username);
+        etName = (EditText) findViewById(R.id.et_Name);
         etRetypePassword = (EditText) findViewById(R.id.et_Retype);
         tvStatus = (TextView) findViewById(R.id.tv_Status);
         cbxTermsAndAgreement = (CheckBox) findViewById(R.id.cbx_TermsAndAgreement);

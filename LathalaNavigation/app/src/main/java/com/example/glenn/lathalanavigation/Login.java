@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class Login extends AppCompatActivity {
     DatabaseOpenHelper db;
     EditText etUsername, etPassword;
     Button login;
-    TextView createAccount, warning;
+    TextView createAccount;
     //end of Nica eto
 
     Button btnLogin;
@@ -28,9 +29,8 @@ public class Login extends AppCompatActivity {
 
         //Nica eto
         db = new DatabaseOpenHelper(getBaseContext());
-        etUsername = (EditText) findViewById(R.id.et_Username);
-        etPassword = (EditText) findViewById(R.id.et_Password);
-        warning = (TextView) findViewById(R.id.Logo);
+        etUsername = (EditText) findViewById(R.id.et_Name);
+        etPassword = (EditText) findViewById(R.id.et_Username);
         //end of Nica eto
 
 
@@ -47,7 +47,8 @@ public class Login extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 u = db.checkifUserExists(username);
                 if(u == null){
-                    warning.setText("Incorrect Username or Password");
+                    Toast.makeText(v.getContext(), "Incorrent Username or Password", Toast.LENGTH_LONG).show();
+
                 }
                 else {
                     String checkPassword = u.getPassword();
@@ -59,7 +60,7 @@ public class Login extends AppCompatActivity {
                         Intent explicit = new Intent();
                         homepage.setClass(getBaseContext(), Publish.class);
                         startActivity(homepage);
-                    } else warning.setText("Incorrect Username or Password");
+                    } else  Toast.makeText(v.getContext(), "Incorrent Username or Password", Toast.LENGTH_LONG).show();
                 }
             }
         });

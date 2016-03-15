@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.glenn.lathalanavigation.CreateAccount"
     tools:showIn="@layout/activity_create_account"
-    android:background="@color/lathalaColor">
+    android:background="@color/lathalaColor"
+    >
 
     <TextView
         android:id="@+id/tv_About"
@@ -25,7 +26,7 @@
         />
 
     <EditText
-        android:id="@+id/et_Username"
+        android:id="@+id/et_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -37,18 +38,27 @@
         android:id="@+id/tv_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_Username"
+        android:layout_below="@+id/et_Name"
         android:text="Username"
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"/>
 
     <EditText
-        android:id="@+id/et_Password"
+        android:id="@+id/et_Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_Password"
         android:background="#ffffff"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_Password"
+        android:background="#ffffff"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"/>
 
     <TextView
@@ -70,28 +80,21 @@
         android:text="Create Account"
         android:background="#1d9442"
         android:textColor="#ffffff"
-        android:layout_below="@+id/cbx_TermsAndAgreement"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="75dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
         android:id="@+id/textView2"
-        android:layout_below="@+id/et_Password"
+        android:layout_below="@+id/et_Username"
         android:layout_alignParentStart="true"
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"/>
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et_Password"
-        android:background="#ffffff"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -101,8 +104,7 @@
         android:textColor="@color/white"
         android:textSize="12dp"
         android:checked="false"
-        android:layout_marginTop="77dp"
-        android:layout_below="@+id/et_Password"
+        android:layout_above="@+id/bt_CreateAccount"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -110,7 +112,10 @@
         android:layout_height="wrap_content"
         android:text="Retype Password"
         android:id="@+id/textView3"
-        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom = "10dp"
+
+
 
         android:textColor="#ffffff"
         android:layout_below="@+id/et_Password"
@@ -120,18 +125,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_Retype"
-        android:layout_marginTop="10dp"
-
         android:background="#ffffff"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Passwords don&apos;t match."
         android:id="@+id/tv_Status"
-        android:layout_below="@+id/et_Retype"
+        android:layout_above="@+id/cbx_TermsAndAgreement"
         android:layout_alignParentStart="true" />
 
 

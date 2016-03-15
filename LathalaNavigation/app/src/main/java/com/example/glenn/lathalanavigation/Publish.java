@@ -20,7 +20,7 @@ public class Publish extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     final static String KEY_CURRENT_PHOTO = "current_photo";
-    
+
     final static int REQUEST_PHOTO = 0;
 
     EditText etContent;
@@ -153,8 +153,8 @@ public class Publish extends AppCompatActivity
 //            startActivity(intent);
 
         } else if (id == R.id.nav_Logout) {
-            Login.ACCOUNT_NAME=null;
-            Login.ACCOUNT_NUMBER=-1;
+//            Login.ACCOUNT_NAME=null;
+//            Login.ACCOUNT_NUMBER=-1;
             finish();
         } else if (id == R.id.nav_About) {
             Intent intent = new Intent();

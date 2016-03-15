@@ -24,7 +24,7 @@
         />
 
     <EditText
-        android:id="@+id/et_Username"
+        android:id="@+id/et_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -37,14 +37,14 @@
         android:id="@+id/tv_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_Username"
+        android:layout_below="@+id/et_Name"
         android:text="Password"
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"
         />
 
     <EditText
-        android:id="@+id/et_Password"
+        android:id="@+id/et_Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -69,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_below="@+id/et_Password"
+        android:layout_below="@+id/et_Username"
         android:layout_marginTop="20dp"
         android:background="#97d4af"
         android:textColor="#ffffff"
