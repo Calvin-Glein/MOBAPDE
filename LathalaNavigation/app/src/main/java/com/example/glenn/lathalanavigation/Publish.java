@@ -60,6 +60,7 @@ public class Publish extends AppCompatActivity
                 explicit.putExtra(KEY_CURRENT_PHOTO, photoPath);
 
                 startActivityForResult(explicit, REQUEST_PHOTO);
+                
             }
         });
 
