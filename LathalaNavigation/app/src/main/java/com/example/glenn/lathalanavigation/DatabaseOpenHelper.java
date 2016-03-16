@@ -9,6 +9,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
 
 
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
@@ -102,9 +104,10 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     public User checkifUserExists(String username) {
         User u = new User();
         SQLiteDatabase db = getReadableDatabase();
-        Cursor c = db.query(User.TABLE_NAME, null, " " + User.COLUMN_USERNAME + "=? ", new String[]{username}, null, null, null);
+        Cursor c = db.query(User.TABLE_NAME, null, " "+ User.COLUMN_USERNAME + "=? ", new String[]{username}, null, null, null);
         if (c.moveToFirst()) {
             u.setId(c.getInt(c.getColumnIndex(User.COLUMN_ID)));
+            u.setName(c.getString(c.getColumnIndex(User.COLUMN_NAME)));
             u.setUsername(c.getString(c.getColumnIndex(User.COLUMN_USERNAME)));
             u.setPassword(c.getString(c.getColumnIndex(User.COLUMN_PASSWORD)));
             //n.setURL(c.getString(c.getColumnIndex(Note.COLUMN_URL)));

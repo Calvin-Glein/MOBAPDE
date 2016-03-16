@@ -3,7 +3,8 @@
     <gradient
         android:angle="135"
         android:centerColor="@color/instagramColor"
-        android:endColor="@color/lathalaColor"
+        android:endColor="@color/instagramColor"
         android:startColor="@color/lathalaColor"
         android:type="linear" />
+
 </shape>

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,6 +27,19 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+//        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+//        getSupportActionBar().hide();
+
+
+
+
         setContentView(R.layout.activity_login);
 
         //Nica eto
@@ -36,16 +51,17 @@ public class Login extends AppCompatActivity {
 
         btnLogin = (Button) findViewById(R.id.bt_Login);
 
+
         tvCreateAccount = (TextView) findViewById(R.id.tv_CreateAccount);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent homepage = new Intent();
-                User u = new User();
+
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                u = db.checkifUserExists(username);
+                User u = db.checkifUserExists(username);
                 if(u == null){
                     Toast.makeText(v.getContext(), "Incorrent Username or Password", Toast.LENGTH_LONG).show();
 
@@ -53,13 +69,15 @@ public class Login extends AppCompatActivity {
                 else {
                     String checkPassword = u.getPassword();
                     if (password.equals(checkPassword) == true) {
-                        //added account number para mag sync
                         ACCOUNT_NUMBER = u.getId();
                         ACCOUNT_NAME = u.getName();
 
+                        Toast.makeText(v.getContext(), u.getName(), Toast.LENGTH_LONG).show();
                         Intent explicit = new Intent();
                         homepage.setClass(getBaseContext(), Publish.class);
                         startActivity(homepage);
+
+
                     } else  Toast.makeText(v.getContext(), "Incorrent Username or Password", Toast.LENGTH_LONG).show();
                 }
             }

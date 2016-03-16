@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,15 +27,26 @@ public class Publish extends AppCompatActivity
 
     EditText etContent;
     Button btnSelectPhoto;
+    TextView tvName;
+    TextView tvWelcomeName;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         btnSelectPhoto = (Button) findViewById(R.id.bt_AddPhoto);
         etContent = (EditText) findViewById(R.id.et_Content);
+        tvName = (TextView) findViewById(R.id.tv_Name);
+
+
+        tvName.setText(Login.ACCOUNT_NAME);
 
         btnSelectPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +72,10 @@ public class Publish extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header = navigationView.getHeaderView(0);
+        tvWelcomeName = (TextView) header.findViewById(R.id.tvWelcome);
+        tvWelcomeName.setText("Welcome " + Login.ACCOUNT_NAME);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
